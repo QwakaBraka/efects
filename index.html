@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Efekty obrazu</title>
+</head>
+<script>
+    function zmiena1(){
+        let blur = document.querySelector("#blur").checked;
+        let sepia = document.querySelector("#sepia").checked;
+        let negatyw = document.querySelector("#negatyw").checked;
+
+        if(blur) 
+        document.querySelector("#pszczola").style.filter = "blur(8px)";
+
+        if(sepia)
+        document.querySelector("#pszczola").style.filter = "sepia(100%)";
+
+        if(negatyw)
+        document.querySelector("#pszczola").style.filter = "invert(100%)";
+    }
+    function zmiena2(){
+        document.querySelector("#pomarancza").style.filter = "none"; 
+    }
+    
+    function zmiena3(){
+        document.querySelector("#pomarancza").style.filter = "grayscale(100%)";
+    }
+    
+    function zmiena4(){
+        let owoces = document.querySelector("#owoces").value;
+        document.querySelector("#owoce").style.filter = "opacity(" + owoces +"%)";
+    }
+    
+    function zmiena5(){
+        let zolws = document.querySelector("#zolws").value;
+        document.querySelector("#zolw").style.filter = "brightness(" + zolws + "%)";
+    }
+</script>
+<body>
+    <section id="baner">
+        <h2>Efekty na obrazach</h2>
+    </section>   
+    
+    <section id="main">
+
+    <section id="perszy">
+        <img src="pszczola.jpg" id="pszczola" alt="pszczoła na fioletowym kwiatku"><br>
+        <input type="radio" name="radio" id="blur" >Blur<br>
+        <input type="radio" name="radio" id="sepia">Sepia<br>
+        <input type="radio" name="radio" id="negatyw">Negatyw<br>
+        <button onclick="zmiena1()">Zastosuj</button>
+    </section>    
+    <section id="drugi">
+        <img src="pomarancza.jpg" id="pomarancza" alt="drzewo pomarańczy"> <br>
+        <button onclick="zmiena2()">Kolorowy</button>
+        <button onclick="zmiena3()">Czarno-bialy</button>
+    </section>    
+    <section id="treci">
+        <img src="owoce.jpg" id="owoce" alt="Kosz pełen owoców”"><br>
+        <input type="range" name="owoces" id="owoces" min="0" max="100" value="100"><br>
+        <button onclick="zmiena4()">Zastosuj</button>
+    </section>    
+    <section id="czwarty">
+        <img src="zolw.jpg" id="zolw" alt="Żółw w wodzie"><br>
+        <input type="range" name="zolws" id="zolws" min="0" max="250"><br>
+        <button onclick="zmiena5()">Zastosuj</button>
+    </section>  
+    
+</section>
+
+
+    <section id="stopka">
+        <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu”</a></p>
+        <p>Stronę wykonał: 64752244</p>
+    </section>    
+</body>
+</html>

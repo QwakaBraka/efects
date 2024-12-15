@@ -1,0 +1,43 @@
+body {
+    font-family: century, serif;
+    text-align: center;
+}
+#baner,
+#stopka {
+    background-color: indigo;
+    color: white;
+    padding: 2px;
+    font-style: italic;
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+}
+#perszy,
+#drugi,
+#treci,
+#czwarty {
+    width: 50%;
+    height: 470px;
+}
+img {
+    padding: 3px;
+    margin: 10px;
+    border: 2px slateblue dashed;
+}
+a {
+    color: white;
+}
+button {
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: indigo;
+}
+input[type="range"] {
+    width: 80%;
+}
